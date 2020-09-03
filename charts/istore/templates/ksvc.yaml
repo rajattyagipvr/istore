@@ -26,7 +26,7 @@ spec:
                       name: jwt-secret
                       key: secret
                 - name: SPRING_DATASOURCE_URL
-                  value: jdbc:mysql://istore-mysql.{{ .Release.Namespace   }}.svc.cluster.local:3306/istore?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
+                  value: jdbc:mysql://istore-mysql.{{ .Release.Namespace   }}.svc.cluster.local:3306/istore?user=root&password=123&useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
                 - name: SPRING_SLEUTH_PROPAGATION_KEYS
                   value: 'x-request-id,x-ot-span-context'
                 - name: JAVA_OPTS

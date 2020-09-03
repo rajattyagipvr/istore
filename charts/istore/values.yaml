@@ -4,7 +4,7 @@
 replicaCount: 1
 image:
   repository: draft
-  tag: dev
+  tag: 
   pullPolicy: IfNotPresent
 
 # define environment variables here as a map of key: value
@@ -96,6 +96,7 @@ jxRequirements:
 mysql:
   enabled: true
   mysqlDatabase: store
+  mysqlRootPassword: "123"
   mysqlAllowEmptyPassword: true
   podAnnotations:
     sidecar.istio.io/inject: 'false'
